@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0901230B-38AD-4FA5-BB67-363E8DFCBBBC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="API\LiarServicosAPI.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="LiarServicosAPI">
+        <MSBuild Projects="API\LiarServicosAPI.dproj"/>
+    </Target>
+    <Target Name="LiarServicosAPI:Clean">
+        <MSBuild Projects="API\LiarServicosAPI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LiarServicosAPI:Make">
+        <MSBuild Projects="API\LiarServicosAPI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="LiarServicosAPI"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="LiarServicosAPI:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="LiarServicosAPI:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
