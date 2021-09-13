@@ -1,4 +1,4 @@
-program LiarServicosAPI;
+program LiarServicosAPIConsole;
 
 {$APPTYPE CONSOLE}
 
@@ -13,7 +13,16 @@ uses
   IdContext,
   IdHTTPWebBrokerBridge,
   UnitBaseController in 'Controller\UnitBaseController.pas',
-  UnitLiarServicosWebModule in 'UnitLiarServicosWebModule.pas' {LiarServicosWebModule: TWebModule};
+  UnitLiarServicosWebModule in 'UnitLiarServicosWebModule.pas' {LiarServicosWebModule: TWebModule},
+  UnitDMConn in 'Data\UnitDMConn.pas' {DMConn: TDataModule},
+  UnitCliente in 'Modelo\UnitCliente.pas',
+  UnitClienteServico in 'Servico\UnitClienteServico.pas',
+  UnitDMBase in 'Data\UnitDMBase.pas' {DMBase: TDataModule},
+  UnitEntidade in 'Modelo\UnitEntidade.pas',
+  UnitDMCliente in 'Data\DMCliente\UnitDMCliente.pas' {DMCliente: TDataModule},
+  UnitFactoryDM in 'Factory\UnitFactoryDM.pas',
+  UnitRegisterController in 'Controller\Apoio\UnitRegisterController.pas',
+  UnitClienteController in 'Controller\UnitClienteController.pas';
 
 {$R *.res}
 

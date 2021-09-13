@@ -26,11 +26,11 @@ implementation
 {$R *.dfm}
 
 uses 
-  Unit1, 
+  UnitBaseController,
   System.IOUtils, 
   MVCFramework.Commons, 
   MVCFramework.Middleware.StaticFiles, 
-  MVCFramework.Middleware.Compression;
+  MVCFramework.Middleware.Compression, UnitRegisterController;
 
 procedure TLiarServicosWebModule.WebModuleCreate(Sender: TObject);
 begin
@@ -60,7 +60,6 @@ begin
       // Max request size in bytes
       Config[TMVCConfigKey.MaxRequestSize] := IntToStr(TMVCConstants.DEFAULT_MAX_REQUEST_SIZE);
     end);
-  FMVC.AddController(TBaseController);
 
   // Enable the following middleware declaration if you want to
   // serve static files from this dmvcframework service.
@@ -72,6 +71,8 @@ begin
 
   // To enable compression (deflate, gzip) just add this middleware as the last one 
   FMVC.AddMiddleware(TMVCCompressionMiddleware.Create);
+
+  RegistrarController.Registrar(FMVC);
 end;
 
 procedure TLiarServicosWebModule.WebModuleDestroy(Sender: TObject);

@@ -7,9 +7,8 @@ uses
 
 type
 
-  [MVCPath('/api')]
-  TBaseController = class(TMVCController) 
-  public
+  TBaseController = class(TMVCController)
+
   end;
 
 implementation
