@@ -9,14 +9,7 @@ object DMConn: TDMConn
       'Password=teste'
       'Server=LocalHost'
       'DriverID=PG')
-    Left = 152
-    Top = 32
-  end
-  object FDPhysPgDriverLink: TFDPhysPgDriverLink
-    VendorLib = 
-      'C:\Users\Weslley\OneDrive\Projetos\_Desenvolvimento\Liar\EXE\lib' +
-      'pq.dll'
-    Left = 40
-    Top = 32
+    Left = 24
+    Top = 16
   end
 end

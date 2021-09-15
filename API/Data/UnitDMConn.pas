@@ -11,7 +11,6 @@ uses
 type
   TDMConn = class(TDataModule)
     FDBConnLiar: TFDConnection;
-    FDPhysPgDriverLink: TFDPhysPgDriverLink;
   private
     { Private declarations }
   public

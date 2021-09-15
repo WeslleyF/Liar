@@ -1,4 +1,4 @@
-program LiarServicosAPIConsole;
+program LiarAPIConsole;
 
 {$APPTYPE CONSOLE}
 
@@ -21,8 +21,8 @@ uses
   UnitEntidade in 'Modelo\UnitEntidade.pas',
   UnitDMCliente in 'Data\DMCliente\UnitDMCliente.pas' {DMCliente: TDataModule},
   UnitFactoryDM in 'Factory\UnitFactoryDM.pas',
-  UnitRegisterController in 'Controller\Apoio\UnitRegisterController.pas',
-  UnitClienteController in 'Controller\UnitClienteController.pas';
+  UnitClienteController in 'Controller\UnitClienteController.pas',
+  UnitRegisterController in 'Controller\Apoio\UnitRegisterController.pas';
 
 {$R *.res}
 
